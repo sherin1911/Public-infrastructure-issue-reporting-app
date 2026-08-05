@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h2>Admin Dashboard - Manage Complaints</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>ID</th>
+    <th>Category</th>
+    <th>Location</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Action</th>
+</tr>
+
+{% for issue in issues %}
+<tr>
+    <td>{{ issue[0] }}</td>
+    <td>{{ issue[1] }}</td>
+    <td>{{ issue[2] }}</td>
+    <td>{{ issue[3] }}</td>
+
+    <td>{{ issue[4] }}</td>
+
+    <td>
+        <form action="/update_status/{{ issue[0] }}" method="POST">
+
+            <select name="status">
+
+                <option value="Pending">Pending</option>
+
+                <option value="In Progress">In Progress</option>
+
+                <option value="Resolved">Resolved</option>
+
+            </select>
+
+            <button type="submit">Update</button>
+
+        </form>
+    </td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>

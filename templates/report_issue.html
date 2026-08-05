@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Issue - CivicConnect</title>
+</head>
+<body>
+
+<h2>Report Public Infrastructure Issue</h2>
+
+<form method="POST">
+
+    <label>Issue Category:</label><br>
+    <select name="category" required>
+        <option value="Road Damage">Road Damage</option>
+        <option value="Streetlight">Streetlight</option>
+        <option value="Garbage">Garbage</option>
+        <option value="Water Leakage">Water Leakage</option>
+        <option value="Drainage">Drainage</option>
+    </select>
+    <br><br>
+
+    <label>Location:</label><br>
+    <input type="text" name="location" required>
+    <br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description" rows="5" cols="40" required></textarea>
+    <br><br>
+
+    <button type="submit">Submit Issue</button>
+
+</form>
+
+<br>
+
+<a href="/">Back to Home</a>
+
+</body>
+</html>
