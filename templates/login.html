@@ -1,27 +1,149 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Login - CivicConnect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citizen Login | CivicConnect</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    body{
+        min-height:100vh;
+        background: linear-gradient(135deg,#dbeafe,#bfdbfe,#e0e7ff);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-family:"Segoe UI",sans-serif;
+    }
+
+    .login-card{
+        width:100%;
+        max-width:460px;
+        background:white;
+        border-radius:24px;
+        padding:40px;
+        box-shadow:0 20px 50px rgba(37,99,235,.18);
+        border:1px solid rgba(37,99,235,.08);
+    }
+
+    .login-icon{
+        width:80px;
+        height:80px;
+        border-radius:20px;
+        background:linear-gradient(135deg,#2563eb,#7c3aed);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto 20px;
+        color:white;
+        font-size:2rem;
+    }
+
+    .form-control{
+        border-radius:14px;
+        padding:12px 14px;
+        border:1px solid #dbeafe;
+    }
+
+    .form-control:focus{
+        border-color:#2563eb;
+        box-shadow:0 0 0 .25rem rgba(37,99,235,.12);
+    }
+
+    .btn-login{
+        background:linear-gradient(90deg,#2563eb,#4f46e5);
+        color:white;
+        border:none;
+        border-radius:14px;
+        padding:12px;
+        font-weight:700;
+    }
+
+    .btn-login:hover{
+        opacity:.95;
+        color:white;
+    }
+
+    a{
+        color:#2563eb;
+        text-decoration:none;
+        font-weight:600;
+    }
+
+    a:hover{
+        color:#1d4ed8;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-<h2>User Login</h2>
+<div class="login-card">
+
+```
+<div class="login-icon">
+    <i class="bi bi-person-circle"></i>
+</div>
+
+<h2 class="text-center fw-bold mb-2 text-dark">Citizen Login</h2>
+
+<p class="text-center text-muted mb-4">
+    Sign in to report and track your public infrastructure complaints
+</p>
 
 <form method="POST">
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <div class="mb-3">
+        <label class="form-label text-dark">Email</label>
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+    </div>
 
-    <label>Password:</label><br>
-    <input type="password" name="password" required><br><br>
+    <div class="mb-4">
+        <label class="form-label text-dark">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Enter your password"
+            required
+        >
+    </div>
 
-    <button type="submit">Login</button>
+    <button type="submit" class="btn btn-login w-100">
+        <i class="bi bi-box-arrow-in-right me-2"></i>
+        Login
+    </button>
 
 </form>
 
-<br>
+<div class="text-center mt-4">
+    <p class="mb-2 text-muted">
+        Don't have an account?
+        <a href="/register">Register here</a>
+    </p>
 
-<a href="/">Back to Home</a>
+    <a href="/">
+        <i class="bi bi-arrow-left me-1"></i>
+        Back to Home
+    </a>
+</div>
+```
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

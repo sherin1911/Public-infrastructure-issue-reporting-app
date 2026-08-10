@@ -1,39 +1,177 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Report Issue - CivicConnect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Issue | CivicConnect</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+    body{
+        min-height:100vh;
+        background: linear-gradient(135deg,#081423,#0b1f3a,#12355b);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-family:"Segoe UI",sans-serif;
+        padding:30px;
+    }
+
+    .report-card{
+        width:100%;
+        max-width:720px;
+        background:rgba(255,255,255,.08);
+        backdrop-filter:blur(15px);
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:24px;
+        padding:40px;
+        color:white;
+        box-shadow:0 20px 45px rgba(0,0,0,.35);
+    }
+
+    .report-icon{
+        width:72px;
+        height:72px;
+        border-radius:18px;
+        background:rgba(20,184,166,.18);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        margin:0 auto 18px;
+    }
+
+    .report-icon i{
+        font-size:2rem;
+        color:#14b8a6;
+    }
+
+    .form-control,.form-select{
+        background:rgba(255,255,255,.08);
+        border:1px solid rgba(255,255,255,.14);
+        color:white;
+        border-radius:14px;
+        padding:12px 14px;
+    }
+
+    .form-control::placeholder{
+        color:#cbd5e1;
+    }
+
+    .form-control:focus,.form-select:focus{
+        background:rgba(255,255,255,.12);
+        color:white;
+        border-color:#14b8a6;
+        box-shadow:0 0 0 .25rem rgba(20,184,166,.18);
+    }
+
+    .form-select option{
+        color:black;
+    }
+
+    textarea.form-control{
+        min-height:140px;
+        resize:none;
+    }
+
+    .btn-submit{
+        background:#14b8a6;
+        color:#062b28;
+        font-weight:700;
+        border:none;
+        border-radius:14px;
+        padding:12px;
+    }
+
+    .btn-submit:hover{
+        background:#0ea5a0;
+        color:#041f1d;
+    }
+
+    a{
+        color:#cbd5e1;
+        text-decoration:none;
+    }
+
+    a:hover{
+        color:white;
+    }
+</style>
+```
+
 </head>
+
 <body>
 
-<h2>Report Public Infrastructure Issue</h2>
+<div class="report-card">
+
+```
+<div class="report-icon">
+    <i class="bi bi-exclamation-triangle-fill"></i>
+</div>
+
+<h2 class="text-center fw-bold mb-2">Report Public Infrastructure Issue</h2>
+
+<p class="text-center text-light mb-4">
+    Submit a complaint and track its progress from reporting to resolution.
+</p>
 
 <form method="POST">
 
-    <label>Issue Category:</label><br>
-    <select name="category" required>
-        <option value="Road Damage">Road Damage</option>
-        <option value="Streetlight">Streetlight</option>
-        <option value="Garbage">Garbage</option>
-        <option value="Water Leakage">Water Leakage</option>
-        <option value="Drainage">Drainage</option>
-    </select>
-    <br><br>
+    <div class="mb-3">
+        <label class="form-label">Issue Category</label>
+        <select class="form-select" name="category" required>
+            <option value="" selected disabled>Select issue category</option>
+            <option value="Road Damage">Road Damage</option>
+            <option value="Street Light Failure">Street Light Failure</option>
+            <option value="Garbage Accumulation">Garbage Accumulation</option>
+            <option value="Water Leakage">Water Leakage</option>
+            <option value="Drainage Problem">Drainage Problem</option>
+        </select>
+    </div>
 
-    <label>Location:</label><br>
-    <input type="text" name="location" required>
-    <br><br>
+    <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input
+            type="text"
+            class="form-control"
+            name="location"
+            placeholder="Enter the issue location"
+            required
+        >
+    </div>
 
-    <label>Description:</label><br>
-    <textarea name="description" rows="5" cols="40" required></textarea>
-    <br><br>
+    <div class="mb-4">
+        <label class="form-label">Issue Description</label>
+        <textarea
+            class="form-control"
+            name="description"
+            placeholder="Describe the problem in detail..."
+            required
+        ></textarea>
+    </div>
 
-    <button type="submit">Submit Issue</button>
+    <button type="submit" class="btn btn-submit w-100">
+        <i class="bi bi-send-fill me-2"></i>
+        Submit Complaint
+    </button>
 
 </form>
 
-<br>
+<div class="text-center mt-4">
+    <a href="/">
+        <i class="bi bi-arrow-left me-1"></i>
+        Back to Home
+    </a>
+</div>
+```
 
-<a href="/">Back to Home</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

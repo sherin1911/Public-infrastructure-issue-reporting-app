@@ -1,26 +1,69 @@
-# CivicConnect
+# CivicConnect - Public Infrastructure Issue Reporting System
 
-## Public Infrastructure Issue Reporting App
+## Overview
 
-CivicConnect is a web-based platform that allows citizens to report public infrastructure problems such as potholes, broken streetlights, garbage issues, and water leakage. The system helps authorities manage complaints efficiently and improves transparency between citizens and government departments.
+CivicConnect is a web-based complaint management system that enables citizens to report public infrastructure issues such as potholes, streetlight failures, garbage accumulation, drainage problems, and water leakage. The system provides separate portals for citizens and administrators, allowing complaints to be tracked from submission to resolution.
 
 ## Features
 
-- User registration and login
-- Report infrastructure issues
-- Upload issue images
-- Track complaint status
-- Admin dashboard for managing issues
+### Citizen Module
+
+* User Registration
+* User Login
+* Report Public Infrastructure Issues
+* View Complaint History
+* Track Complaint Status
+
+### Admin Module
+
+* Secure Admin Login
+* View All Complaints
+* Update Complaint Status (Pending / In Progress / Resolved)
+* Complaint Management Dashboard
 
 ## Technologies Used
 
-- Python
-- Flask
-- HTML
-- CSS
-- Bootstrap
-- SQLite
+* Python
+* Flask
+* SQLite
+* HTML
+* CSS
+* Bootstrap 5
 
-## Project Status
+## Project Structure
 
-MVP Development Phase
+Public-infrastructure-issue-reporting-app/
+
+* app.py
+* civicconnect.db
+* templates/
+* static/
+* README.md
+
+## Default Admin Credentials
+
+Email: [admin@civicconnect.com](mailto:admin@civicconnect.com)
+Password: admin123
+
+## How to Run
+
+1. Open the project folder in VS Code.
+2. Activate the virtual environment.
+3. Run:
+   python app.py
+4. Open:
+   http://127.0.0.1:5000
+
+## Future Enhancements
+
+* Image Upload
+* Email Notifications
+* GIS / Map Integration
+* Mobile Application
+* Analytics Dashboard
+
+## Developed By
+
+Sherin S
+3rd Year B.Tech (AI&DS) 
+Capstone Project
